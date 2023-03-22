@@ -1,0 +1,25 @@
+;>
+# Overview of %delta
+This documentation is for the desk %delta, including both `delta.hoon` and `delta-follower.hoon`. 
+
+- Developer: `~sarlev-sarsen`
+- License: REKT
+- Blog link: [Rooftop Blog](https://sarlev-sarsen.rooftopdao.io/blog)
+- Source repo: [https://github.com/thelifeandtimes/delta](https://github.com/thelifeandtimes/delta)
+
+This app is crazy basic and was developer as a part of App School Live ~2023.01 taught by ~lagrev-nocfep.
+
+In essence, it allows you to push values onto a stack of a given ship, and pop them off the stack as well.
+
+## Pokes
+### `%delta` agent
+- `:delta &delta-action [%push ~zod 30.000]`
+Push a value (`@ud`) onto the stack of a given ship (`@p`)
+- `:delta &delta-action [%pop ~zod]`
+Pop the most recent value off the stack of a given ship (`@p`)
+
+### `%delta-follower` agent
+- `:delta-follower [%sub ~zod]`
+Subscribe to a ship (`@p`)
+- `:delta-follow [%unsub ~zod]`
+Unsubscribe from a ship (`@p`)
